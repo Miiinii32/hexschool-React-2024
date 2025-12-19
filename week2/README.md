@@ -12,7 +12,12 @@
 1. bootStrap
 2. React 元件建立、useState
 3. vite
+4. axios + async / await 串接 API
 
 ## Demo 畫面
 
 <img src="" alt="w2-demo-img" width="300">
+
+## 紀錄
+
+1. 透過三元運算值判斷是否登入，然後用 useState 切換畫面，之後學習 Router！！
