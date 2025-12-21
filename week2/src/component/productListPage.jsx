@@ -1,5 +1,12 @@
+import axios from "axios";
 import React from "react";
-const { useState } = React;
+const { useState, useEffect } = React;
+const url = `${import.meta.env.VITE_BASE_URL}`;
+const path = `${import.meta.env.VITE_API_PATH}`;
+const token = document.cookie.replace(
+  /(?:(?:^|.*;\s*)hexToken\s*\=\s*([^;]*).*$)|^.*$/,
+  "$1"
+);
 
 const productData = [
   {
@@ -127,6 +134,20 @@ const ProductDetail = ({ product }) => {
 };
 const ProductListPage = () => {
   const [productDetail, setProductDetail] = useState({});
+  const [productList, setProductList] = useState([]);
+  useEffect(() => {
+    const getProductList = async () => {
+      try {
+        axios.defaults.headers.common["Authorization"] = token;
+        await axios.post(`${url}/v2/api/user/check`);
+        const res = await axios.get(`${url}/v2/api/${path}/admin/products/all`);
+        console.log(res);
+      } catch (error) {
+        console.log(error.response);
+      }
+    };
+    getProductList();
+  }, []);
   return (
     <>
       <div className="container mt-5">
@@ -144,7 +165,7 @@ const ProductListPage = () => {
                 </tr>
               </thead>
               <tbody>
-                {productData.map((product) => {
+                {/* {productData.map((product) => {
                   return (
                     <ProductList
                       product={product}
@@ -152,7 +173,7 @@ const ProductListPage = () => {
                       setProductDetail={setProductDetail}
                     />
                   );
-                })}
+                })} */}
               </tbody>
             </table>
             <button type="button" className="btn btn-info mt-5">
