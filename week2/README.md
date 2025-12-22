@@ -17,7 +17,14 @@
 ## Demo 畫面
 
 <img src="" alt="w2-demo-img" width="300">
+<video width="640" height="360" controls>
+  <source src="/week2/public/w2-demo-video.mov" type="video/mp4">
+  這裡是demo影片。
+</video>
 
 ## 紀錄
 
 1. 透過三元運算值判斷是否登入，然後用 useState 切換畫面，之後學習 Router！！
+2. 如何放 token 在 cookie 上，如何從 cookie 上刪除 token
+3. 登出無法使用三元運算值切換登入頁面，違反 React 的 spa 原則，最後使用瀏覽器的路由導向，之後學習 Router 可以改善這個問題。
+4. cookie 的 token 讀取不能放在全域
