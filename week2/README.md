@@ -16,10 +16,7 @@
 
 ## Demo 畫面
 
-<video width="640" height="360" controls>
-  <source src="/week2/public/w2-demo-video.mov" type="video/mp4">
-  這裡是demo影片。
-</video>
+https://github.com/user-attachments/assets/42b24ec4-c521-402f-b881-aec397a36957
 
 ## 紀錄
 
