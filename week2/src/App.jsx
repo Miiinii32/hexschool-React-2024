@@ -37,7 +37,7 @@ function App() {
       setIsLogin(true);
       console.log(token, expired);
     } catch (error) {
-      console.log(error.message);
+      console.log(error.response);
     }
   };
 
