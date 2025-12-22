@@ -16,7 +16,6 @@
 
 ## Demo 畫面
 
-<img src="" alt="w2-demo-img" width="300">
 <video width="640" height="360" controls>
   <source src="/week2/public/w2-demo-video.mov" type="video/mp4">
   這裡是demo影片。
